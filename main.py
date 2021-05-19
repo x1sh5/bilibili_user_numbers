@@ -3,7 +3,7 @@ import re
 import time
 
 
-class bilibiliNUm():
+class BilibiliNUm():
     def __init__(self,opener,Request,giveNum=200000000):
         self.opener = opener
         self.Request = Request
@@ -64,7 +64,7 @@ if __name__ == '__main__':
     req = request.Request(url,headers=headers)
 
     res = opener.open(req)
-    bn = bilibiliNUm(opener,req)
+    bn = BilibiliNUm(opener,req)
     num = bn.find_the_num()
     localtime = time.asctime(time.localtime(time.time()))
     print('B站{}的用户数是{}'.format(localtime,num))
